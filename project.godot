@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Game Jam"
+config/name="Ecos del Pasado"
+config/description="Trata de descubrir el misterio que trae consigo el pasado oculto de nuestro personaje."
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://icon.svg"

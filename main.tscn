@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://ccj6lt4uk87l7"]
+[gd_scene load_steps=60 format=3 uid="uid://ccj6lt4uk87l7"]
 
 [ext_resource type="Script" path="res://Scripts/GameManager.cs" id="1_5eum7"]
 [ext_resource type="PackedScene" uid="uid://clmct33ks176s" path="res://Scenes/player.tscn" id="1_uvhoj"]
@@ -30,6 +30,8 @@
 [ext_resource type="Texture2D" uid="uid://b07w7npniwh56" path="res://Assets/objetos y ambiente/Objetos y Ambiente09.png" id="28_eyjyr"]
 [ext_resource type="Texture2D" uid="uid://c4bebinrcqpnl" path="res://Assets/objetos y ambiente/cama 2.png" id="28_yufe0"]
 [ext_resource type="Texture2D" uid="uid://bmmy25p0xm50l" path="res://Assets/objetos y ambiente/mueble1grande.png" id="30_0hdf1"]
+[ext_resource type="Texture2D" uid="uid://b54ilmfjgghmt" path="res://Assets/objetos y ambiente/mueble0grande.png" id="31_5ha72"]
+[ext_resource type="Texture2D" uid="uid://f5qec2lg5fnt" path="res://Assets/objetos y ambiente/mueble de noche1.png" id="32_28ttm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1atf"]
 size = Vector2(310, 108)
@@ -38,7 +40,7 @@ size = Vector2(310, 108)
 size = Vector2(131, 251)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e10pg"]
-size = Vector2(39, 41)
+size = Vector2(66.0625, 128.594)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_koy21"]
 texture = ExtResource("6_vid6i")
@@ -241,8 +243,8 @@ scale = Vector2(0.769, 1)
 
 [node name="Sprite2D" parent="Items/Puerta" index="1"]
 texture_filter = 1
-position = Vector2(68.9207, 8.00003)
-scale = Vector2(8.04368, 6.78719)
+position = Vector2(68.9207, 4.2025)
+scale = Vector2(8.04368, 6.54984)
 texture = ExtResource("12_tymf3")
 
 [node name="Cama" type="Area2D" parent="Items"]
@@ -251,11 +253,11 @@ script = ExtResource("5_155r2")
 dialogText = "<Las sábanas están desgastadas y el colchón parece hundido y viejo. Es hora de reemplazarlos>"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Cama"]
-position = Vector2(145, 43)
+position = Vector2(136, 35)
 shape = SubResource("RectangleShape2D_r1atf")
 
 [node name="Cama2" type="Sprite2D" parent="Items/Cama"]
-position = Vector2(151, 51)
+position = Vector2(138, 37)
 texture = ExtResource("28_yufe0")
 
 [node name="Ropero" type="Area2D" parent="Items"]
@@ -264,37 +266,213 @@ script = ExtResource("5_155r2")
 dialogText = "Al abrir el ropero la puerta chirría, sorpresa está vacío "
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Ropero"]
-position = Vector2(55.5, 115.5)
+position = Vector2(47, 147)
 shape = SubResource("RectangleShape2D_k5we3")
 
 [node name="Mueble1Grande" type="Sprite2D" parent="Items/Ropero"]
 texture_filter = 1
-position = Vector2(590, 583)
+position = Vector2(583, 616)
 scale = Vector2(5, 5)
 texture = ExtResource("30_0hdf1")
 
 [node name="Area2D" type="Area2D" parent="Items"]
 position = Vector2(412, 88)
 script = ExtResource("5_155r2")
-dialogText = "asdfasdfqwer"
+dialogText = "Deberia comprar otra lampara"
 
 [node name="ObjetosYAmbiente18" type="Sprite2D" parent="Items/Area2D"]
-position = Vector2(15, 15)
+position = Vector2(-103, -45)
+scale = Vector2(2, 2.20313)
 texture = ExtResource("16_33xdm")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Area2D"]
-position = Vector2(9.5, 10.5)
+[node name="CollisionShape2D lampara" type="CollisionShape2D" parent="Items/Area2D"]
+position = Vector2(-99, -78.7031)
 shape = SubResource("RectangleShape2D_e10pg")
+
+[node name="ObjetosYAmbiente21" type="Sprite2D" parent="Items/Area2D"]
+position = Vector2(866, 542)
+scale = Vector2(6.38735, 12.443)
+texture = ExtResource("18_sgn3d")
+
+[node name="ObjetosYAmbiente03" type="Sprite2D" parent="Items/Area2D"]
+position = Vector2(-196, 623)
+scale = Vector2(19.8945, 5.34766)
+texture = ExtResource("7_fnxld")
+
+[node name="ObjetosYAmbiente04" type="Sprite2D" parent="Items/Area2D"]
+position = Vector2(83, 622)
+scale = Vector2(19.8945, 5.34766)
+texture = ExtResource("7_fnxld")
+
+[node name="ObjetosYAmbiente05" type="Sprite2D" parent="Items/Area2D"]
+position = Vector2(361, 623)
+scale = Vector2(19.8945, 5.34766)
+texture = ExtResource("7_fnxld")
+
+[node name="ObjetosYAmbiente06" type="Sprite2D" parent="Items/Area2D"]
+position = Vector2(634, 624)
+scale = Vector2(19.8945, 5.34766)
+texture = ExtResource("7_fnxld")
+
+[node name="ObjetosYAmbiente07" type="Sprite2D" parent="Items/Area2D"]
+position = Vector2(809, 624)
+scale = Vector2(7.50977, 5.34766)
+texture = ExtResource("7_fnxld")
+
+[node name="ObjetosYAmbiente08" type="Sprite2D" parent="Items/Area2D"]
+position = Vector2(-200, 233)
+scale = Vector2(9.78613, 8.39258)
+texture = ExtResource("7_fnxld")
+
+[node name="ObjetosYAmbiente09" type="Sprite2D" parent="Items/Area2D"]
+position = Vector2(-333.395, 231.82)
+scale = Vector2(9.64966, 8.05127)
+texture = ExtResource("7_fnxld")
+
+[node name="ObjetosYAmbiente10" type="Sprite2D" parent="Items/Area2D"]
+position = Vector2(221, -86)
+scale = Vector2(26.5, 7.40063)
+texture = ExtResource("7_fnxld")
+
+[node name="ObjetosYAmbiente11" type="Sprite2D" parent="Items/Area2D"]
+position = Vector2(-54, -87)
+scale = Vector2(9.7467, 7.15063)
+texture = ExtResource("7_fnxld")
+
+[node name="ObjetosYAmbiente12" type="Sprite2D" parent="Items/Area2D"]
+position = Vector2(590, -87)
+scale = Vector2(26.5, 7.40063)
+texture = ExtResource("7_fnxld")
+
+[node name="ObjetosYAmbiente13" type="Sprite2D" parent="Items/Area2D"]
+position = Vector2(816, -85)
+scale = Vector2(7.58203, 5.51883)
+texture = ExtResource("7_fnxld")
+
+[node name="ObjetosYAmbiente19" type="Sprite2D" parent="Items/Area2D"]
+position = Vector2(-131, 88)
+scale = Vector2(6.34473, 21.4366)
+texture = ExtResource("18_sgn3d")
+
+[node name="ObjetosYAmbiente20" type="Sprite2D" parent="Items/Area2D"]
+position = Vector2(868, 84)
+scale = Vector2(6.34473, 21.4366)
+texture = ExtResource("18_sgn3d")
+
+[node name="ObjetosYAmbiente19" type="Sprite2D" parent="Items/Area2D/ObjetosYAmbiente20"]
+position = Vector2(471.226, 67.9298)
+scale = Vector2(3.2747, 12.0346)
+texture = ExtResource("18_sgn3d")
+
+[node name="ObjetosYAmbiente22" type="Sprite2D" parent="Items/Area2D"]
+position = Vector2(867, 393)
+scale = Vector2(6.34473, 21.4366)
+texture = ExtResource("18_sgn3d")
+
+[node name="ObjetosYAmbiente20" type="Sprite2D" parent="Items/Area2D/ObjetosYAmbiente22"]
+position = Vector2(467.097, 241.404)
+scale = Vector2(3.2747, 12.0346)
+texture = ExtResource("18_sgn3d")
+
+[node name="ObjetosYAmbiente23" type="Sprite2D" parent="Items/Area2D"]
+position = Vector2(-404, 390)
+scale = Vector2(6.34473, 18.5)
+texture = ExtResource("18_sgn3d")
+
+[node name="ObjetosYAmbiente14" type="Sprite2D" parent="Items/Area2D"]
+position = Vector2(92, 585)
+scale = Vector2(6, 7.23437)
+texture = ExtResource("22_f0aa7")
+
+[node name="ObjetosYAmbiente04" type="Sprite2D" parent="Items/Area2D/ObjetosYAmbiente14"]
+position = Vector2(675, 670)
+scale = Vector2(6, 7.23437)
+texture = ExtResource("22_f0aa7")
+
+[node name="Area2D3" type="Area2D" parent="Items"]
+position = Vector2(412, 88)
+script = ExtResource("5_155r2")
+dialogText = "No recuerdo tener este collar"
+
+[node name="MuebleDeNoche1" type="Sprite2D" parent="Items/Area2D3"]
+position = Vector2(548, 448)
+scale = Vector2(2.93457, 2.33301)
+texture = ExtResource("32_28ttm")
+
+[node name="CollisionShape2D computadora" type="CollisionShape2D" parent="Items/Area2D3"]
+position = Vector2(826.063, 339.813)
+shape = SubResource("RectangleShape2D_e10pg")
+
+[node name="Area2D4" type="Area2D" parent="Items"]
+position = Vector2(412, 88)
+script = ExtResource("5_155r2")
+dialogText = "No quiero jugar ahora"
+
+[node name="CollisionShape2D mesaN2" type="CollisionShape2D" parent="Items/Area2D4"]
+position = Vector2(-90, 53)
+shape = SubResource("RectangleShape2D_e10pg")
+
+[node name="Area2D2" type="Area2D" parent="Items"]
 
 [node name="Decoration" type="TileMap" parent="."]
 z_index = -1
 texture_filter = 1
-position = Vector2(641.52, 359.545)
+position = Vector2(643, 358)
 scale = Vector2(45.95, 36)
 tile_set = SubResource("TileSet_8ve6w")
 format = 2
 layer_0/tile_data = PackedInt32Array(-1, 0, 0, 65535, 0, 1, -65536, 65536, 0, 0, 65536, 1)
 
 [node name="Items2" type="Node2D" parent="."]
+
+[node name="ObjetosYAmbiente01" type="Sprite2D" parent="."]
+position = Vector2(500, 887)
+texture = ExtResource("7_fnxld")
+
+[node name="ObjetosYAmbiente03" type="Sprite2D" parent="."]
+position = Vector2(38, 712)
+scale = Vector2(4.66406, 5.32031)
+texture = ExtResource("7_fnxld")
+
+[node name="Mueble0Grande" type="Sprite2D" parent="."]
+position = Vector2(1549, 645)
+scale = Vector2(2.88477, 2.26172)
+texture = ExtResource("31_5ha72")
+
+[node name="ObjetosYAmbiente11" type="Sprite2D" parent="."]
+position = Vector2(308, 270)
+scale = Vector2(3.375, 4.0625)
+texture = ExtResource("9_xslcr")
+
+[node name="ObjetosYAmbiente12" type="Sprite2D" parent="."]
+position = Vector2(324.167, 139.715)
+rotation = -1.56882
+scale = Vector2(6.24083, 4.1725)
+texture = ExtResource("10_col6m")
+
+[node name="ObjetosYAmbiente17" type="Sprite2D" parent="."]
+position = Vector2(47, 368)
+scale = Vector2(2.90625, 3)
+texture = ExtResource("15_ncnad")
+
+[node name="ObjetosYAmbiente19" type="Sprite2D" parent="."]
+position = Vector2(590.25, 672.5)
+scale = Vector2(3.67188, 3.15625)
+texture = ExtResource("17_jeeky")
+
+[node name="ObjetosYAmbiente22" type="Sprite2D" parent="."]
+position = Vector2(1249, 432)
+scale = Vector2(0.84375, 0.84375)
+texture = ExtResource("21_2yo80")
+
+[node name="ObjetosYAmbiente04" type="Sprite2D" parent="."]
+position = Vector2(675, 670)
+scale = Vector2(6, 7.23437)
+texture = ExtResource("22_f0aa7")
+
+[node name="ObjetosYAmbiente04" type="Sprite2D" parent="ObjetosYAmbiente04"]
+position = Vector2(675, 670)
+scale = Vector2(6, 7.23437)
+texture = ExtResource("22_f0aa7")
 
 [editable path="Items/Puerta"]

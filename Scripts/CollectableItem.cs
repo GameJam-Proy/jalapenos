@@ -1,7 +1,7 @@
 public partial class CollectableItem : InteractableItem
 {
-    public CollectableItem()
-    {
-        Text = "Interactuar [E]";
-    }
+	public CollectableItem()
+	{
+		Text = "Interactuar [E]";
+	}
 }

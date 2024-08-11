@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://ccj6lt4uk87l7"]
+[gd_scene load_steps=58 format=3 uid="uid://ccj6lt4uk87l7"]
 
 [ext_resource type="Script" path="res://Scripts/GameManager.cs" id="1_5eum7"]
 [ext_resource type="PackedScene" uid="uid://clmct33ks176s" path="res://Scenes/player.tscn" id="1_uvhoj"]
@@ -36,6 +36,9 @@ size = Vector2(310, 108)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k5we3"]
 size = Vector2(131, 251)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e10pg"]
+size = Vector2(39, 41)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_koy21"]
 texture = ExtResource("6_vid6i")
@@ -220,7 +223,7 @@ script = ExtResource("1_5eum7")
 
 [node name="Player" parent="." instance=ExtResource("1_uvhoj")]
 z_index = 1
-position = Vector2(181, 109)
+position = Vector2(1234, 557)
 
 [node name="DialogBox" type="Sprite2D" parent="."]
 visible = false
@@ -269,6 +272,19 @@ texture_filter = 1
 position = Vector2(590, 583)
 scale = Vector2(5, 5)
 texture = ExtResource("30_0hdf1")
+
+[node name="Area2D" type="Area2D" parent="Items"]
+position = Vector2(412, 88)
+script = ExtResource("5_155r2")
+dialogText = "asdfasdfqwer"
+
+[node name="ObjetosYAmbiente18" type="Sprite2D" parent="Items/Area2D"]
+position = Vector2(15, 15)
+texture = ExtResource("16_33xdm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Area2D"]
+position = Vector2(9.5, 10.5)
+shape = SubResource("RectangleShape2D_e10pg")
 
 [node name="Decoration" type="TileMap" parent="."]
 z_index = -1

@@ -1,0 +1,80 @@
+[gd_scene load_steps=12 format=3 uid="uid://clmct33ks176s"]
+
+[ext_resource type="Script" path="res://Scripts/Player.cs" id="1_ldg0w"]
+[ext_resource type="Texture2D" uid="uid://c1vjfvpw87wpk" path="res://Assets/Explorador/sprite_0.png" id="2_w3xvr"]
+[ext_resource type="Texture2D" uid="uid://crri72xj0kvhx" path="res://Assets/Explorador/sprite_1.png" id="3_4kyki"]
+[ext_resource type="Texture2D" uid="uid://dtnoaxpsk7l1d" path="res://Assets/Explorador/sprite_2.png" id="4_fsacr"]
+[ext_resource type="Texture2D" uid="uid://dv151h24hko6g" path="res://Assets/Explorador/sprite_6.png" id="5_8w1jj"]
+[ext_resource type="Texture2D" uid="uid://ibcbnx8s8rx2" path="res://Assets/Explorador/sprite_7.png" id="6_7uplx"]
+[ext_resource type="Texture2D" uid="uid://bhgol0tnwqskg" path="res://Assets/Explorador/sprite_3.png" id="7_ymymq"]
+[ext_resource type="Texture2D" uid="uid://bnpw170emv1p" path="res://Assets/Explorador/sprite_4.png" id="8_r1i4h"]
+[ext_resource type="Texture2D" uid="uid://ct4bx5wbfsxk7" path="res://Assets/Explorador/sprite_5.png" id="9_lmxx1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p3ecy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_w3xvr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_w3xvr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4kyki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fsacr")
+}],
+"loop": true,
+"name": &"down_walk",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_8w1jj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7uplx")
+}],
+"loop": true,
+"name": &"horizontal_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ymymq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_r1i4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_lmxx1")
+}],
+"loop": true,
+"name": &"up_walk",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gi4fh"]
+size = Vector2(88, 101.5)
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("animatedSprite")]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_ldg0w")
+animatedSprite = NodePath("PlayerAnimatedSprite")
+
+[node name="PlayerAnimatedSprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(4.2, 4.2)
+sprite_frames = SubResource("SpriteFrames_p3ecy")
+animation = &"down_walk"
+frame_progress = 0.92618
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -12.75)
+shape = SubResource("RectangleShape2D_gi4fh")

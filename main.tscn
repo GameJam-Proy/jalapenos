@@ -1,0 +1,284 @@
+[gd_scene load_steps=57 format=3 uid="uid://ccj6lt4uk87l7"]
+
+[ext_resource type="Script" path="res://Scripts/GameManager.cs" id="1_5eum7"]
+[ext_resource type="PackedScene" uid="uid://clmct33ks176s" path="res://Scenes/player.tscn" id="1_uvhoj"]
+[ext_resource type="PackedScene" uid="uid://djeg5qgpf25h7" path="res://Scenes/collectable.tscn" id="2_yngqh"]
+[ext_resource type="Texture2D" uid="uid://dti64an4ap5f2" path="res://Assets/sprite_0.png" id="4_b5pcq"]
+[ext_resource type="Script" path="res://Scripts/CollectableItem.cs" id="5_155r2"]
+[ext_resource type="Texture2D" uid="uid://df2hokte37plx" path="res://Assets/objetos y ambiente/Objetos y Ambiente00.png" id="6_vid6i"]
+[ext_resource type="Texture2D" uid="uid://cpprr4yro2rie" path="res://Assets/objetos y ambiente/Objetos y Ambiente01.png" id="7_fnxld"]
+[ext_resource type="Texture2D" uid="uid://cfhshk1powb78" path="res://Assets/objetos y ambiente/Objetos y Ambiente10.png" id="8_2r8lq"]
+[ext_resource type="Texture2D" uid="uid://co633lqalhvbq" path="res://Assets/objetos y ambiente/Objetos y Ambiente11.png" id="9_xslcr"]
+[ext_resource type="Texture2D" uid="uid://i3bqhtfwnwlv" path="res://Assets/objetos y ambiente/Objetos y Ambiente12.png" id="10_col6m"]
+[ext_resource type="Texture2D" uid="uid://0dheji0dstff" path="res://Assets/objetos y ambiente/Objetos y Ambiente13.png" id="11_ld17l"]
+[ext_resource type="Texture2D" uid="uid://brm76pufnsry3" path="res://Assets/objetos y ambiente/Objetos y Ambiente14.png" id="12_tymf3"]
+[ext_resource type="Texture2D" uid="uid://u85xjeohp3pm" path="res://Assets/objetos y ambiente/Objetos y Ambiente15.png" id="13_petdg"]
+[ext_resource type="Texture2D" uid="uid://raie6fe5gk41" path="res://Assets/objetos y ambiente/Objetos y Ambiente16.png" id="14_7tft6"]
+[ext_resource type="Texture2D" uid="uid://c7euv0at7nfyj" path="res://Assets/objetos y ambiente/Objetos y Ambiente17.png" id="15_ncnad"]
+[ext_resource type="Texture2D" uid="uid://h11nburxon7u" path="res://Assets/objetos y ambiente/Objetos y Ambiente18.png" id="16_33xdm"]
+[ext_resource type="Texture2D" uid="uid://bp1sfykebbpw3" path="res://Assets/objetos y ambiente/Objetos y Ambiente19.png" id="17_jeeky"]
+[ext_resource type="Texture2D" uid="uid://cchpocliv8i1f" path="res://Assets/objetos y ambiente/Objetos y Ambiente02.png" id="18_sgn3d"]
+[ext_resource type="Texture2D" uid="uid://b4hd37uedvsnn" path="res://Assets/objetos y ambiente/Objetos y Ambiente20.png" id="19_yhr5o"]
+[ext_resource type="Texture2D" uid="uid://cu5p0y7wncy2c" path="res://Assets/objetos y ambiente/Objetos y Ambiente21.png" id="20_rvjro"]
+[ext_resource type="Texture2D" uid="uid://b1w08mc2ltnii" path="res://Assets/objetos y ambiente/Objetos y Ambiente22.png" id="21_2yo80"]
+[ext_resource type="Texture2D" uid="uid://db8ewkwlv1jwk" path="res://Assets/objetos y ambiente/Objetos y Ambiente03.png" id="22_f0aa7"]
+[ext_resource type="Texture2D" uid="uid://bxmaydrf3ddbb" path="res://Assets/objetos y ambiente/Objetos y Ambiente04.png" id="23_qhgdd"]
+[ext_resource type="Texture2D" uid="uid://b87ubp6blvms1" path="res://Assets/objetos y ambiente/Objetos y Ambiente05.png" id="24_mfl3o"]
+[ext_resource type="Texture2D" uid="uid://cre33nmxlscdy" path="res://Assets/objetos y ambiente/Objetos y Ambiente06.png" id="25_gtv2c"]
+[ext_resource type="Texture2D" uid="uid://87jcus7nvswb" path="res://Assets/objetos y ambiente/Objetos y Ambiente07.png" id="26_d4mou"]
+[ext_resource type="Texture2D" uid="uid://b7mun1n8duka7" path="res://Assets/objetos y ambiente/Objetos y Ambiente08.png" id="27_0wfg0"]
+[ext_resource type="Texture2D" uid="uid://b07w7npniwh56" path="res://Assets/objetos y ambiente/Objetos y Ambiente09.png" id="28_eyjyr"]
+[ext_resource type="Texture2D" uid="uid://c4bebinrcqpnl" path="res://Assets/objetos y ambiente/cama 2.png" id="28_yufe0"]
+[ext_resource type="Texture2D" uid="uid://bmmy25p0xm50l" path="res://Assets/objetos y ambiente/mueble1grande.png" id="30_0hdf1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1atf"]
+size = Vector2(310, 108)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k5we3"]
+size = Vector2(131, 251)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_koy21"]
+texture = ExtResource("6_vid6i")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_atjub"]
+texture = ExtResource("7_fnxld")
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q4k7d"]
+texture = ExtResource("8_2r8lq")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bs6bn"]
+texture = ExtResource("9_xslcr")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yikxk"]
+texture = ExtResource("10_col6m")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5n0x2"]
+texture = ExtResource("11_ld17l")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7yonr"]
+texture = ExtResource("12_tymf3")
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xpf1t"]
+texture = ExtResource("13_petdg")
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ql8fp"]
+texture = ExtResource("14_7tft6")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pargf"]
+texture = ExtResource("15_ncnad")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3d2h"]
+texture = ExtResource("16_33xdm")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nav5j"]
+texture = ExtResource("17_jeeky")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jm8ps"]
+texture = ExtResource("18_sgn3d")
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_43xld"]
+texture = ExtResource("19_yhr5o")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rvrh0"]
+texture = ExtResource("20_rvjro")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mfld8"]
+texture = ExtResource("21_2yo80")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_20ci5"]
+texture = ExtResource("22_f0aa7")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o5uo1"]
+texture = ExtResource("23_qhgdd")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jowt3"]
+texture = ExtResource("24_mfl3o")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pf4kd"]
+texture = ExtResource("25_gtv2c")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qe4pv"]
+texture = ExtResource("26_d4mou")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eobi3"]
+texture = ExtResource("27_0wfg0")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rlqlf"]
+texture = ExtResource("28_eyjyr")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_8ve6w"]
+sources/0 = SubResource("TileSetAtlasSource_koy21")
+sources/1 = SubResource("TileSetAtlasSource_atjub")
+sources/2 = SubResource("TileSetAtlasSource_jm8ps")
+sources/3 = SubResource("TileSetAtlasSource_20ci5")
+sources/4 = SubResource("TileSetAtlasSource_o5uo1")
+sources/5 = SubResource("TileSetAtlasSource_jowt3")
+sources/6 = SubResource("TileSetAtlasSource_pf4kd")
+sources/7 = SubResource("TileSetAtlasSource_qe4pv")
+sources/8 = SubResource("TileSetAtlasSource_eobi3")
+sources/9 = SubResource("TileSetAtlasSource_rlqlf")
+sources/10 = SubResource("TileSetAtlasSource_q4k7d")
+sources/11 = SubResource("TileSetAtlasSource_bs6bn")
+sources/12 = SubResource("TileSetAtlasSource_yikxk")
+sources/13 = SubResource("TileSetAtlasSource_5n0x2")
+sources/14 = SubResource("TileSetAtlasSource_7yonr")
+sources/15 = SubResource("TileSetAtlasSource_xpf1t")
+sources/16 = SubResource("TileSetAtlasSource_ql8fp")
+sources/17 = SubResource("TileSetAtlasSource_pargf")
+sources/18 = SubResource("TileSetAtlasSource_n3d2h")
+sources/19 = SubResource("TileSetAtlasSource_nav5j")
+sources/20 = SubResource("TileSetAtlasSource_43xld")
+sources/21 = SubResource("TileSetAtlasSource_rvrh0")
+sources/22 = SubResource("TileSetAtlasSource_mfld8")
+
+[node name="RoomScene" type="Node2D"]
+script = ExtResource("1_5eum7")
+
+[node name="Player" parent="." instance=ExtResource("1_uvhoj")]
+z_index = 1
+position = Vector2(181, 109)
+
+[node name="DialogBox" type="Sprite2D" parent="."]
+visible = false
+z_index = 2
+texture_filter = 1
+position = Vector2(637, 30)
+scale = Vector2(48, 3)
+texture = ExtResource("4_b5pcq")
+
+[node name="Items" type="Node2D" parent="."]
+
+[node name="Puerta" parent="Items" instance=ExtResource("2_yngqh")]
+position = Vector2(-47, 660)
+scale = Vector2(0.769, 1)
+
+[node name="Sprite2D" parent="Items/Puerta" index="1"]
+texture_filter = 1
+position = Vector2(68.9207, 8.00003)
+scale = Vector2(8.04368, 6.78719)
+texture = ExtResource("12_tymf3")
+
+[node name="Cama" type="Area2D" parent="Items"]
+position = Vector2(982, 619)
+script = ExtResource("5_155r2")
+dialogText = "<Las sábanas están desgastadas y el colchón parece hundido y viejo. Es hora de reemplazarlos>"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Cama"]
+position = Vector2(145, 43)
+shape = SubResource("RectangleShape2D_r1atf")
+
+[node name="Cama2" type="Sprite2D" parent="Items/Cama"]
+position = Vector2(151, 51)
+texture = ExtResource("28_yufe0")
+
+[node name="Ropero" type="Area2D" parent="Items"]
+position = Vector2(1159, 4)
+script = ExtResource("5_155r2")
+dialogText = "Al abrir el ropero la puerta chirría, sorpresa está vacío "
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Ropero"]
+position = Vector2(55.5, 115.5)
+shape = SubResource("RectangleShape2D_k5we3")
+
+[node name="Mueble1Grande" type="Sprite2D" parent="Items/Ropero"]
+texture_filter = 1
+position = Vector2(590, 583)
+scale = Vector2(5, 5)
+texture = ExtResource("30_0hdf1")
+
+[node name="Decoration" type="TileMap" parent="."]
+z_index = -1
+texture_filter = 1
+position = Vector2(641.52, 359.545)
+scale = Vector2(45.95, 36)
+tile_set = SubResource("TileSet_8ve6w")
+format = 2
+layer_0/tile_data = PackedInt32Array(-1, 0, 0, 65535, 0, 1, -65536, 65536, 0, 0, 65536, 1)
+
+[node name="Items2" type="Node2D" parent="."]
+
+[editable path="Items/Puerta"]
